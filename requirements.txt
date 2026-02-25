@@ -1,0 +1,5 @@
+# Isaac Sim comes with its own Python environment, PyTorch, and Numpy.
+# Only add EXTERNAL dependencies here.
+tensorboard
+skrl>=1.1.0  # High-performance RL library compatible with Isaac Gym
+hydra-core   # For elegant YAML configuration management
