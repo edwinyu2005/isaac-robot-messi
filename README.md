@@ -1,4 +1,12 @@
-# Isaac Robot Messi: Massively Parallel Set-Piece Shootout
+# Isaac Robot Messi: Massively Parallel Set-Piece Shootout ⚽️🤖
+
+![Milestone 1 Demo](media/milestone_1.gif)
+
+*Figure 1: Milestone 1 Physics Verification. Demonstrates the Unitree Go2 quadruped spawning and interacting with a dynamic football using PhysX 5. The robot acts as a passive ragdoll here as PD controllers are not yet active.*
+
+## 🚀 Quick Navigation
+- **[Onboarding & Setup Guide](docs/01_ONBOARDING.md)**: Hardware requirements, Isaac Sim standalone installation, and API troubleshooting.
+- **[Milestone 1: Physics & Visualization](docs/02_MILESTONE_1.md)**: Scene verification and CLI tools for generating optimized demo GIFs.
 
 ## Overview
 A high-performance Reinforcement Learning (RL) sandbox built on **NVIDIA Isaac Sim** and **OpenUSD**. This project trains a quadruped robot to execute dynamic set-piece shootouts (kicking a football into a target goal) using purely joint-level PD control. 
@@ -32,27 +40,10 @@ This project utilizes a split-compute architecture to accommodate hardware const
 * **Local Development (RTX 3070 8GB / Ubuntu 20.04):** Used exclusively for OpenUSD scene composition, tensor logic debugging, and single/low-count environment testing with GUI enabled.
 * **Cloud Scaling (24GB+ VRAM):** Used for massively parallel PPO training (2048+ envs) in headless mode to achieve >10,000 FPS.
 
-## Getting Started & Reproducibility
-
-### 1. Prerequisites
-Unlike standard Python projects, **DO NOT use `venv` or `conda`**. NVIDIA Isaac Sim is a standalone 3D rendering and physics engine. You must install the core engine before running any scripts.
-
-1. **Install Isaac Sim:** Go to https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/download.html, download and unzip **Isaac Sim 4.5**.
-2. **Hardware:** * Local Debugging: NVIDIA RTX GPU (Minimum 8GB VRAM).
-   * Cloud Training: NVIDIA RTX GPU (24GB+ VRAM for massive parallelism).
-   * OS: Ubuntu 20.04/22.04 LTS.
-
-### 2. Environment Setup
-Install the external RL dependencies (like `skrl` and `tensorboard`) directly into Isaac Sim's embedded Python environment:
-
-```bash
-# Point the script to your specific Isaac Sim 4.5 path
-./setup.sh ~/isaacsim # or other path
-```
-
 ## Repository Structure
-* `assets/`: Local cache for specific USD assets (football, goal posts).
+* `docs/`: Detailed guides for onboarding and milestone execution.
+* `media/`: Visual assets and performance recordings.
 * `configs/`: YAML configurations for simulation parameters and RL hyperparameters.
 * `envs/`: Core RL environment logic (`step`, `reset`, tensor extraction).
-* `scripts/`: Execution entry points (e.g., `train.py`, `check_scene.py`).
-* `utils/`: Helpers for math (batched ego-centric TF transforms) and USD procedural generation.
+* `scripts/`: Execution entry points (e.g., `train.py`, `check_scene.py`, `process_demo.py`).
+* `messi_utils/`: Helpers for batched math and USD procedural generation.
