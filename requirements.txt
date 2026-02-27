@@ -3,3 +3,5 @@
 tensorboard
 skrl>=1.1.0  # High-performance RL library compatible with Isaac Gym
 hydra-core   # For elegant YAML configuration management
+flake8       # For strict code linting and formatting compliance
+pytest       # For future unit testing capabilities
