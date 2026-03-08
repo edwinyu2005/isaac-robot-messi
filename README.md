@@ -4,6 +4,10 @@
 
 *Figure 1: Milestone 1 Physics Verification. Demonstrates the Unitree Go2 quadruped spawning and interacting with a dynamic football using PhysX 5. The robot acts as a passive ragdoll here as PD controllers are not yet active.*
 
+![Milestone 2 Reset](media/milestone_2.gif)
+
+*Figure 2: Milestone 2.3 Reset & Randomization. Shows the automated reset-to-standing logic and stochastic ball placement within the robot's forward arc.*
+
 ## 🚀 Quick Navigation
 - **[Onboarding & Setup Guide](docs/01_ONBOARDING.md)**: Hardware requirements, Isaac Sim standalone installation, and API troubleshooting.
 - **[Milestone 1: Physics & Visualization](docs/02_MILESTONE_1.md)**: Scene verification and CLI tools for generating optimized demo GIFs.

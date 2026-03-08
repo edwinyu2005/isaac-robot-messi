@@ -17,20 +17,20 @@ def parse_args():
     )
 
     parser.add_argument("--input", required=True, help="Path to input webm file")
-    parser.add_argument("--output", default="milestone1_optimized.gif", help="Output name")
-    parser.add_argument("--start", default="00:00:16", help="Start time HH:MM:SS")
-    parser.add_argument("--end", default="00:00:20", help="End time HH:MM:SS")
-    parser.add_argument("--speed", type=float, default=0.5, help="Speed factor")
+    parser.add_argument("--output", default="milestone.gif", help="Output name")
+    parser.add_argument("--start", default="00:00:05", help="Start time HH:MM:SS")
+    parser.add_argument("--end", default="00:00:10", help="End time HH:MM:SS")
+    parser.add_argument("--speed", type=float, default=1.0, help="Speed factor")
 
     # Cropping parameters
-    parser.add_argument("--crop_x", type=int, default=150, help="Crop X offset")
-    parser.add_argument("--crop_y", type=int, default=100, help="Crop Y offset")
-    parser.add_argument("--crop_w", type=int, default=1280, help="Crop width")
-    parser.add_argument("--crop_h", type=int, default=720, help="Crop height")
+    parser.add_argument("--crop_x", type=int, default=180, help="Crop X offset")
+    parser.add_argument("--crop_y", type=int, default=130, help="Crop Y offset")
+    parser.add_argument("--crop_w", type=int, default=1000, help="Crop width")
+    parser.add_argument("--crop_h", type=int, default=700, help="Crop height")
 
     # Optimization parameters
     parser.add_argument("--target_w", type=int, default=640, help="Target width for scaling")
-    parser.add_argument("--fps", type=int, default=15, help="Target frames per second")
+    parser.add_argument("--fps", type=int, default=10, help="Target frames per second")
 
     return parser.parse_args()
 
