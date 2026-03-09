@@ -58,7 +58,7 @@ def main():
         ball_y = r * torch.sin(theta)
 
         ball_view.set_world_poses(
-            positions=torch.cat([ball_x.view(1, 1), ball_y.view(1, 1), 
+            positions=torch.cat([ball_x.view(1, 1), ball_y.view(1, 1),
                                 torch.tensor([[0.5]], device="cuda:0")], dim=-1),
             indices=indices
         )

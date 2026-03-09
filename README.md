@@ -12,6 +12,7 @@
 - **[Onboarding & Setup Guide](docs/01_ONBOARDING.md)**: Hardware requirements, Isaac Sim standalone installation, and API troubleshooting.
 - **[Milestone 1: Physics & Visualization](docs/02_MILESTONE_1.md)**: Scene verification and CLI tools for generating optimized demo GIFs.
 - **[Milestone 2: MDP Pipeline](docs/03_MILESTONE_2.md)**: Zero-copy tensor extraction and ego-centric transforms.
+- **[Milestone 3: Reward Design & Training](docs/04_MILESTONE_3.md)**: RL environment class encapsulation and PPO training pipeline.
 
 ## Overview
 A high-performance Reinforcement Learning (RL) sandbox built on **NVIDIA Isaac Sim** and **OpenUSD**. This project trains a quadruped robot to execute dynamic set-piece shootouts (kicking a football into a target goal) using purely joint-level PD control. 
