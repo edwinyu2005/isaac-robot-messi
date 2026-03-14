@@ -5,6 +5,7 @@ Encapsulates physics stepping, tensor extraction, and reward computation.
 
 import torch
 from messi_utils.math_utils import get_relative_pos
+from gymnasium.spaces import Box
 
 
 class MessiEnv:
@@ -21,6 +22,9 @@ class MessiEnv:
         # Obs: 12 joint pos, 12 joint vel, 3 base lin_vel, 3 base ang_vel,
         # 3 relative ball pos = 33 dimensions
         self.num_obs = 33
+
+        self.observation_space = Box(low=-float("inf"), high=float("inf"), shape=(self.num_obs,))
+        self.action_space = Box(low=-1.0, high=1.0, shape=(self.num_actions,))
 
         # Allocate PyTorch buffers for RL transitions
         self.obs_buf = torch.zeros((self.num_envs, self.num_obs), device=self.device)
